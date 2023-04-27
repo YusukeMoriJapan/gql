@@ -23,11 +23,15 @@ abstract class GHeroMergeData
   GHeroMergeData_hero? get hero;
   static Serializer<GHeroMergeData> get serializer =>
       _$gHeroMergeDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroMergeData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroMergeData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroMergeData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroMergeData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroMergeData.serializer,
+        json,
+      );
 }
 
 abstract class GHeroMergeData_hero
@@ -45,9 +49,13 @@ abstract class GHeroMergeData_hero
   String get name;
   static Serializer<GHeroMergeData_hero> get serializer =>
       _$gHeroMergeDataHeroSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroMergeData_hero.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroMergeData_hero.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroMergeData_hero? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroMergeData_hero.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroMergeData_hero.serializer,
+        json,
+      );
 }

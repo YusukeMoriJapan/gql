@@ -25,11 +25,15 @@ abstract class GHeroSkipFragmentData
   GHeroSkipFragmentData_hero? get hero;
   static Serializer<GHeroSkipFragmentData> get serializer =>
       _$gHeroSkipFragmentDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroSkipFragmentData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroSkipFragmentData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroSkipFragmentData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroSkipFragmentData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroSkipFragmentData.serializer,
+        json,
+      );
 }
 
 abstract class GHeroSkipFragmentData_hero
@@ -57,10 +61,14 @@ abstract class GHeroSkipFragmentData_hero
       _$gHeroSkipFragmentDataHeroSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GHeroSkipFragmentData_hero.serializer, this) as Map<String, dynamic>);
+        GHeroSkipFragmentData_hero.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroSkipFragmentData_hero? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GHeroSkipFragmentData_hero.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroSkipFragmentData_hero.serializer,
+        json,
+      );
 }
 
 abstract class GHeroSkipFragmentData_hero_friends
@@ -86,13 +94,16 @@ abstract class GHeroSkipFragmentData_hero_friends
   static Serializer<GHeroSkipFragmentData_hero_friends> get serializer =>
       _$gHeroSkipFragmentDataHeroFriendsSerializer;
   @override
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GHeroSkipFragmentData_hero_friends.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroSkipFragmentData_hero_friends.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroSkipFragmentData_hero_friends? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GHeroSkipFragmentData_hero_friends.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroSkipFragmentData_hero_friends.serializer,
+        json,
+      );
 }
 
 abstract class GHeroDetail {
@@ -131,11 +142,15 @@ abstract class GHeroDetailData
   static Serializer<GHeroDetailData> get serializer =>
       _$gHeroDetailDataSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroDetailData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroDetailData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroDetailData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroDetailData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroDetailData.serializer,
+        json,
+      );
 }
 
 abstract class GHeroDetailData_friends
@@ -160,9 +175,13 @@ abstract class GHeroDetailData_friends
   static Serializer<GHeroDetailData_friends> get serializer =>
       _$gHeroDetailDataFriendsSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroDetailData_friends.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroDetailData_friends.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroDetailData_friends? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroDetailData_friends.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroDetailData_friends.serializer,
+        json,
+      );
 }

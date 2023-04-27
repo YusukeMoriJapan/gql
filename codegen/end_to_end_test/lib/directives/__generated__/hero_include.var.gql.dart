@@ -19,9 +19,13 @@ abstract class GHeroIncludeVars
   bool get includeId;
   static Serializer<GHeroIncludeVars> get serializer =>
       _$gHeroIncludeVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroIncludeVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroIncludeVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroIncludeVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroIncludeVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroIncludeVars.serializer,
+        json,
+      );
 }

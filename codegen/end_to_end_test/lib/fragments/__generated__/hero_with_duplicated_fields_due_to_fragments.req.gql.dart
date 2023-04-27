@@ -26,14 +26,20 @@ abstract class GHeroWithFragmentsDuplication
 
   static void _initializeBuilder(GHeroWithFragmentsDuplicationBuilder b) => b
     ..operation = _i1.Operation(
-        document: _i2.document, operationName: 'HeroWithFragmentsDuplication');
+      document: _i2.document,
+      operationName: 'HeroWithFragmentsDuplication',
+    );
   _i3.GHeroWithFragmentsDuplicationVars get vars;
   _i1.Operation get operation;
   static Serializer<GHeroWithFragmentsDuplication> get serializer =>
       _$gHeroWithFragmentsDuplicationSerializer;
   Map<String, dynamic> toJson() => (_i4.serializers.serializeWith(
-      GHeroWithFragmentsDuplication.serializer, this) as Map<String, dynamic>);
+        GHeroWithFragmentsDuplication.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroWithFragmentsDuplication? fromJson(Map<String, dynamic> json) =>
-      _i4.serializers
-          .deserializeWith(GHeroWithFragmentsDuplication.serializer, json);
+      _i4.serializers.deserializeWith(
+        GHeroWithFragmentsDuplication.serializer,
+        json,
+      );
 }

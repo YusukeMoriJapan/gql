@@ -18,9 +18,13 @@ abstract class GHeroMergeVars
 
   static Serializer<GHeroMergeVars> get serializer =>
       _$gHeroMergeVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroMergeVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroMergeVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroMergeVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroMergeVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroMergeVars.serializer,
+        json,
+      );
 }

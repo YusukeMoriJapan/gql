@@ -29,10 +29,14 @@ abstract class GHeroWithInlineFragmentsData
   static Serializer<GHeroWithInlineFragmentsData> get serializer =>
       _$gHeroWithInlineFragmentsDataSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-      GHeroWithInlineFragmentsData.serializer, this) as Map<String, dynamic>);
+        GHeroWithInlineFragmentsData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroWithInlineFragmentsData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GHeroWithInlineFragmentsData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroWithInlineFragmentsData.serializer,
+        json,
+      );
 }
 
 abstract class GHeroWithInlineFragmentsData_hero {
@@ -40,15 +44,20 @@ abstract class GHeroWithInlineFragmentsData_hero {
   String get G__typename;
   static Serializer<GHeroWithInlineFragmentsData_hero> get serializer =>
       _i2.InlineFragmentSerializer<GHeroWithInlineFragmentsData_hero>(
-          'GHeroWithInlineFragmentsData_hero',
-          GHeroWithInlineFragmentsData_hero__base, {});
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GHeroWithInlineFragmentsData_hero.serializer, this)
-      as Map<String, dynamic>);
+        'GHeroWithInlineFragmentsData_hero',
+        GHeroWithInlineFragmentsData_hero__base,
+        {},
+      );
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroWithInlineFragmentsData_hero.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroWithInlineFragmentsData_hero? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GHeroWithInlineFragmentsData_hero.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroWithInlineFragmentsData_hero.serializer,
+        json,
+      );
 }
 
 abstract class GHeroWithInlineFragmentsData_hero__base
@@ -72,10 +81,13 @@ abstract class GHeroWithInlineFragmentsData_hero__base
       _$gHeroWithInlineFragmentsDataHeroBaseSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GHeroWithInlineFragmentsData_hero__base.serializer, this)
-      as Map<String, dynamic>);
+        GHeroWithInlineFragmentsData_hero__base.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroWithInlineFragmentsData_hero__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GHeroWithInlineFragmentsData_hero__base.serializer, json);
+        GHeroWithInlineFragmentsData_hero__base.serializer,
+        json,
+      );
 }

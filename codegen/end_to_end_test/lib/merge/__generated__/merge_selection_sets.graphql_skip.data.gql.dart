@@ -23,11 +23,15 @@ abstract class GHeroMergeSkipData
   GHeroMergeSkipData_hero? get hero;
   static Serializer<GHeroMergeSkipData> get serializer =>
       _$gHeroMergeSkipDataSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroMergeSkipData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroMergeSkipData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroMergeSkipData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroMergeSkipData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroMergeSkipData.serializer,
+        json,
+      );
 }
 
 abstract class GHeroMergeSkipData_hero
@@ -46,9 +50,13 @@ abstract class GHeroMergeSkipData_hero
   String get name;
   static Serializer<GHeroMergeSkipData_hero> get serializer =>
       _$gHeroMergeSkipDataHeroSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroMergeSkipData_hero.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroMergeSkipData_hero.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroMergeSkipData_hero? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroMergeSkipData_hero.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroMergeSkipData_hero.serializer,
+        json,
+      );
 }

@@ -26,13 +26,16 @@ abstract class GHeroWithFragmentsDuplicationData
   GHeroWithFragmentsDuplicationData_hero? get hero;
   static Serializer<GHeroWithFragmentsDuplicationData> get serializer =>
       _$gHeroWithFragmentsDuplicationDataSerializer;
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GHeroWithFragmentsDuplicationData.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroWithFragmentsDuplicationData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroWithFragmentsDuplicationData? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GHeroWithFragmentsDuplicationData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroWithFragmentsDuplicationData.serializer,
+        json,
+      );
 }
 
 abstract class GHeroWithFragmentsDuplicationData_hero
@@ -60,12 +63,15 @@ abstract class GHeroWithFragmentsDuplicationData_hero
       _$gHeroWithFragmentsDuplicationDataHeroSerializer;
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-          GHeroWithFragmentsDuplicationData_hero.serializer, this)
-      as Map<String, dynamic>);
+        GHeroWithFragmentsDuplicationData_hero.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroWithFragmentsDuplicationData_hero? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
-          GHeroWithFragmentsDuplicationData_hero.serializer, json);
+        GHeroWithFragmentsDuplicationData_hero.serializer,
+        json,
+      );
 }
 
 abstract class GheroData {
@@ -93,9 +99,13 @@ abstract class GheroDataData
   String get name;
   static Serializer<GheroDataData> get serializer => _$gheroDataDataSerializer;
   @override
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GheroDataData.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GheroDataData.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GheroDataData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GheroDataData.serializer, json);
+      _i1.serializers.deserializeWith(
+        GheroDataData.serializer,
+        json,
+      );
 }

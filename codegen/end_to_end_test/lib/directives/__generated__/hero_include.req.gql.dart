@@ -22,14 +22,20 @@ abstract class GHeroInclude
       _$GHeroInclude;
 
   static void _initializeBuilder(GHeroIncludeBuilder b) => b
-    ..operation =
-        _i1.Operation(document: _i2.document, operationName: 'HeroInclude');
+    ..operation = _i1.Operation(
+      document: _i2.document,
+      operationName: 'HeroInclude',
+    );
   _i3.GHeroIncludeVars get vars;
   _i1.Operation get operation;
   static Serializer<GHeroInclude> get serializer => _$gHeroIncludeSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i4.serializers.serializeWith(GHeroInclude.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i4.serializers.serializeWith(
+        GHeroInclude.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroInclude? fromJson(Map<String, dynamic> json) =>
-      _i4.serializers.deserializeWith(GHeroInclude.serializer, json);
+      _i4.serializers.deserializeWith(
+        GHeroInclude.serializer,
+        json,
+      );
 }

@@ -19,9 +19,13 @@ abstract class GHeroMergeSkipVars
   bool get withName;
   static Serializer<GHeroMergeSkipVars> get serializer =>
       _$gHeroMergeSkipVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GHeroMergeSkipVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroMergeSkipVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroMergeSkipVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GHeroMergeSkipVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroMergeSkipVars.serializer,
+        json,
+      );
 }

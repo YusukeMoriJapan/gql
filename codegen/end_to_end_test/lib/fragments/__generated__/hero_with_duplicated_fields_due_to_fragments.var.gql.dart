@@ -21,13 +21,16 @@ abstract class GHeroWithFragmentsDuplicationVars
 
   static Serializer<GHeroWithFragmentsDuplicationVars> get serializer =>
       _$gHeroWithFragmentsDuplicationVarsSerializer;
-  Map<String, dynamic> toJson() => (_i1.serializers
-          .serializeWith(GHeroWithFragmentsDuplicationVars.serializer, this)
-      as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GHeroWithFragmentsDuplicationVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GHeroWithFragmentsDuplicationVars? fromJson(
           Map<String, dynamic> json) =>
-      _i1.serializers
-          .deserializeWith(GHeroWithFragmentsDuplicationVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GHeroWithFragmentsDuplicationVars.serializer,
+        json,
+      );
 }
 
 abstract class GheroDataVars
@@ -38,9 +41,13 @@ abstract class GheroDataVars
       _$GheroDataVars;
 
   static Serializer<GheroDataVars> get serializer => _$gheroDataVarsSerializer;
-  Map<String, dynamic> toJson() =>
-      (_i1.serializers.serializeWith(GheroDataVars.serializer, this)
-          as Map<String, dynamic>);
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GheroDataVars.serializer,
+        this,
+      ) as Map<String, dynamic>);
   static GheroDataVars? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(GheroDataVars.serializer, json);
+      _i1.serializers.deserializeWith(
+        GheroDataVars.serializer,
+        json,
+      );
 }
