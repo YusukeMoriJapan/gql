@@ -4827,8 +4827,8 @@ class _$GAddAssigneesToAssignableInputSerializer
           specifiedType: const FullType(String)),
       'assigneeIds',
       serializers.serialize(object.assigneeIds,
-          specifiedType:
-              const FullType(BuiltList, const [const FullType(String)])),
+          specifiedType: const FullType(
+              BuiltList, const [const FullType.nullable(String)])),
     ];
     Object? value;
     value = object.clientMutationId;
@@ -4860,7 +4860,7 @@ class _$GAddAssigneesToAssignableInputSerializer
         case 'assigneeIds':
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'clientMutationId':
@@ -4950,8 +4950,8 @@ class _$GAddLabelsToLabelableInputSerializer
     final result = <Object?>[
       'labelIds',
       serializers.serialize(object.labelIds,
-          specifiedType:
-              const FullType(BuiltList, const [const FullType(String)])),
+          specifiedType: const FullType(
+              BuiltList, const [const FullType.nullable(String)])),
       'labelableId',
       serializers.serialize(object.labelableId,
           specifiedType: const FullType(String)),
@@ -4986,7 +4986,7 @@ class _$GAddLabelsToLabelableInputSerializer
         case 'labelIds':
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'labelableId':
@@ -6201,8 +6201,8 @@ class _$GCommitAuthorSerializer implements StructuredSerializer<GCommitAuthor> {
       result
         ..add('emails')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.id;
     if (value != null) {
@@ -6229,7 +6229,7 @@ class _$GCommitAuthorSerializer implements StructuredSerializer<GCommitAuthor> {
         case 'emails':
           result.emails.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'id':
@@ -6528,8 +6528,8 @@ class _$GCreateBranchProtectionRuleInputSerializer
       result
         ..add('pushActorIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.requiredApprovingReviewCount;
     if (value != null) {
@@ -6542,8 +6542,8 @@ class _$GCreateBranchProtectionRuleInputSerializer
       result
         ..add('requiredStatusCheckContexts')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.requiresApprovingReviews;
     if (value != null) {
@@ -6599,8 +6599,8 @@ class _$GCreateBranchProtectionRuleInputSerializer
       result
         ..add('reviewDismissalActorIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     return result;
   }
@@ -6636,7 +6636,7 @@ class _$GCreateBranchProtectionRuleInputSerializer
         case 'pushActorIds':
           result.pushActorIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'repositoryId':
@@ -6651,7 +6651,7 @@ class _$GCreateBranchProtectionRuleInputSerializer
           result.requiredStatusCheckContexts.replace(serializers.deserialize(
                   value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'requiresApprovingReviews':
@@ -6685,7 +6685,7 @@ class _$GCreateBranchProtectionRuleInputSerializer
         case 'reviewDismissalActorIds':
           result.reviewDismissalActorIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
       }
@@ -6712,8 +6712,8 @@ class _$GCreateEnterpriseOrganizationInputSerializer
     final result = <Object?>[
       'adminLogins',
       serializers.serialize(object.adminLogins,
-          specifiedType:
-              const FullType(BuiltList, const [const FullType(String)])),
+          specifiedType: const FullType(
+              BuiltList, const [const FullType.nullable(String)])),
       'billingEmail',
       serializers.serialize(object.billingEmail,
           specifiedType: const FullType(String)),
@@ -6753,7 +6753,7 @@ class _$GCreateEnterpriseOrganizationInputSerializer
         case 'adminLogins':
           result.adminLogins.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'billingEmail':
@@ -6807,8 +6807,8 @@ class _$GCreateIssueInputSerializer
       result
         ..add('assigneeIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.body;
     if (value != null) {
@@ -6829,8 +6829,8 @@ class _$GCreateIssueInputSerializer
       result
         ..add('labelIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.milestoneId;
     if (value != null) {
@@ -6844,8 +6844,8 @@ class _$GCreateIssueInputSerializer
       result
         ..add('projectIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     return result;
   }
@@ -6865,7 +6865,7 @@ class _$GCreateIssueInputSerializer
         case 'assigneeIds':
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'body':
@@ -6879,7 +6879,7 @@ class _$GCreateIssueInputSerializer
         case 'labelIds':
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'milestoneId':
@@ -6889,7 +6889,7 @@ class _$GCreateIssueInputSerializer
         case 'projectIds':
           result.projectIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'repositoryId':
@@ -6948,8 +6948,8 @@ class _$GCreateProjectInputSerializer
       result
         ..add('repositoryIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.template;
     if (value != null) {
@@ -6992,7 +6992,7 @@ class _$GCreateProjectInputSerializer
         case 'repositoryIds':
           result.repositoryIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'template':
@@ -9437,8 +9437,8 @@ class _$GIssueFiltersSerializer implements StructuredSerializer<GIssueFilters> {
       result
         ..add('labels')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.mentioned;
     if (value != null) {
@@ -9467,7 +9467,7 @@ class _$GIssueFiltersSerializer implements StructuredSerializer<GIssueFilters> {
         ..add('states')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(
-                BuiltList, const [const FullType(GIssueState)])));
+                BuiltList, const [const FullType.nullable(GIssueState)])));
     }
     value = object.viewerSubscribed;
     if (value != null) {
@@ -9502,7 +9502,7 @@ class _$GIssueFiltersSerializer implements StructuredSerializer<GIssueFilters> {
         case 'labels':
           result.labels.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'mentioned':
@@ -9520,7 +9520,7 @@ class _$GIssueFiltersSerializer implements StructuredSerializer<GIssueFilters> {
         case 'states':
           result.states.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(GIssueState)]))!
+                      BuiltList, const [const FullType.nullable(GIssueState)]))!
               as BuiltList<Object?>);
           break;
         case 'viewerSubscribed':
@@ -11569,8 +11569,8 @@ class _$GRemoveAssigneesFromAssignableInputSerializer
           specifiedType: const FullType(String)),
       'assigneeIds',
       serializers.serialize(object.assigneeIds,
-          specifiedType:
-              const FullType(BuiltList, const [const FullType(String)])),
+          specifiedType: const FullType(
+              BuiltList, const [const FullType.nullable(String)])),
     ];
     Object? value;
     value = object.clientMutationId;
@@ -11602,7 +11602,7 @@ class _$GRemoveAssigneesFromAssignableInputSerializer
         case 'assigneeIds':
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'clientMutationId':
@@ -11761,8 +11761,8 @@ class _$GRemoveLabelsFromLabelableInputSerializer
     final result = <Object?>[
       'labelIds',
       serializers.serialize(object.labelIds,
-          specifiedType:
-              const FullType(BuiltList, const [const FullType(String)])),
+          specifiedType: const FullType(
+              BuiltList, const [const FullType.nullable(String)])),
       'labelableId',
       serializers.serialize(object.labelableId,
           specifiedType: const FullType(String)),
@@ -11797,7 +11797,7 @@ class _$GRemoveLabelsFromLabelableInputSerializer
         case 'labelIds':
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'labelableId':
@@ -12533,8 +12533,8 @@ class _$GRequestReviewsInputSerializer
       result
         ..add('teamIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.union;
     if (value != null) {
@@ -12548,8 +12548,8 @@ class _$GRequestReviewsInputSerializer
       result
         ..add('userIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     return result;
   }
@@ -12577,7 +12577,7 @@ class _$GRequestReviewsInputSerializer
         case 'teamIds':
           result.teamIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'union':
@@ -12587,7 +12587,7 @@ class _$GRequestReviewsInputSerializer
         case 'userIds':
           result.userIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
       }
@@ -14311,8 +14311,8 @@ class _$GUpdateBranchProtectionRuleInputSerializer
       result
         ..add('pushActorIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.requiredApprovingReviewCount;
     if (value != null) {
@@ -14325,8 +14325,8 @@ class _$GUpdateBranchProtectionRuleInputSerializer
       result
         ..add('requiredStatusCheckContexts')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.requiresApprovingReviews;
     if (value != null) {
@@ -14382,8 +14382,8 @@ class _$GUpdateBranchProtectionRuleInputSerializer
       result
         ..add('reviewDismissalActorIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     return result;
   }
@@ -14423,7 +14423,7 @@ class _$GUpdateBranchProtectionRuleInputSerializer
         case 'pushActorIds':
           result.pushActorIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'requiredApprovingReviewCount':
@@ -14434,7 +14434,7 @@ class _$GUpdateBranchProtectionRuleInputSerializer
           result.requiredStatusCheckContexts.replace(serializers.deserialize(
                   value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'requiresApprovingReviews':
@@ -14468,7 +14468,7 @@ class _$GUpdateBranchProtectionRuleInputSerializer
         case 'reviewDismissalActorIds':
           result.reviewDismissalActorIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
       }
@@ -15836,8 +15836,8 @@ class _$GUpdateIssueInputSerializer
       result
         ..add('assigneeIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.body;
     if (value != null) {
@@ -15858,8 +15858,8 @@ class _$GUpdateIssueInputSerializer
       result
         ..add('labelIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.milestoneId;
     if (value != null) {
@@ -15873,8 +15873,8 @@ class _$GUpdateIssueInputSerializer
       result
         ..add('projectIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.state;
     if (value != null) {
@@ -15908,7 +15908,7 @@ class _$GUpdateIssueInputSerializer
         case 'assigneeIds':
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'body':
@@ -15926,7 +15926,7 @@ class _$GUpdateIssueInputSerializer
         case 'labelIds':
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'milestoneId':
@@ -15936,7 +15936,7 @@ class _$GUpdateIssueInputSerializer
         case 'projectIds':
           result.projectIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'state':
@@ -16222,8 +16222,8 @@ class _$GUpdatePullRequestInputSerializer
       result
         ..add('assigneeIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.baseRefName;
     if (value != null) {
@@ -16251,8 +16251,8 @@ class _$GUpdatePullRequestInputSerializer
       result
         ..add('labelIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.maintainerCanModify;
     if (value != null) {
@@ -16273,8 +16273,8 @@ class _$GUpdatePullRequestInputSerializer
       result
         ..add('projectIds')
         ..add(serializers.serialize(value,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(String)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType.nullable(String)])));
     }
     value = object.state;
     if (value != null) {
@@ -16308,7 +16308,7 @@ class _$GUpdatePullRequestInputSerializer
         case 'assigneeIds':
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'baseRefName':
@@ -16326,7 +16326,7 @@ class _$GUpdatePullRequestInputSerializer
         case 'labelIds':
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'maintainerCanModify':
@@ -16340,7 +16340,7 @@ class _$GUpdatePullRequestInputSerializer
         case 'projectIds':
           result.projectIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
         case 'pullRequestId':
@@ -16949,8 +16949,8 @@ class _$GUpdateTopicsInputSerializer
           specifiedType: const FullType(String)),
       'topicNames',
       serializers.serialize(object.topicNames,
-          specifiedType:
-              const FullType(BuiltList, const [const FullType(String)])),
+          specifiedType: const FullType(
+              BuiltList, const [const FullType.nullable(String)])),
     ];
     Object? value;
     value = object.clientMutationId;
@@ -16986,7 +16986,7 @@ class _$GUpdateTopicsInputSerializer
         case 'topicNames':
           result.topicNames.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
-                      BuiltList, const [const FullType(String)]))!
+                      BuiltList, const [const FullType.nullable(String)]))!
               as BuiltList<Object?>);
           break;
       }
@@ -17311,7 +17311,7 @@ class _$GAddAssigneesToAssignableInput extends GAddAssigneesToAssignableInput {
   @override
   final String assignableId;
   @override
-  final BuiltList<String> assigneeIds;
+  final BuiltList<String?> assigneeIds;
   @override
   final String? clientMutationId;
 
@@ -17374,10 +17374,10 @@ class GAddAssigneesToAssignableInputBuilder
   String? get assignableId => _$this._assignableId;
   set assignableId(String? assignableId) => _$this._assignableId = assignableId;
 
-  ListBuilder<String>? _assigneeIds;
-  ListBuilder<String> get assigneeIds =>
-      _$this._assigneeIds ??= new ListBuilder<String>();
-  set assigneeIds(ListBuilder<String>? assigneeIds) =>
+  ListBuilder<String?>? _assigneeIds;
+  ListBuilder<String?> get assigneeIds =>
+      _$this._assigneeIds ??= new ListBuilder<String?>();
+  set assigneeIds(ListBuilder<String?>? assigneeIds) =>
       _$this._assigneeIds = assigneeIds;
 
   String? _clientMutationId;
@@ -17551,7 +17551,7 @@ class _$GAddLabelsToLabelableInput extends GAddLabelsToLabelableInput {
   @override
   final String? clientMutationId;
   @override
-  final BuiltList<String> labelIds;
+  final BuiltList<String?> labelIds;
   @override
   final String labelableId;
 
@@ -17614,10 +17614,10 @@ class GAddLabelsToLabelableInputBuilder
   set clientMutationId(String? clientMutationId) =>
       _$this._clientMutationId = clientMutationId;
 
-  ListBuilder<String>? _labelIds;
-  ListBuilder<String> get labelIds =>
-      _$this._labelIds ??= new ListBuilder<String>();
-  set labelIds(ListBuilder<String>? labelIds) => _$this._labelIds = labelIds;
+  ListBuilder<String?>? _labelIds;
+  ListBuilder<String?> get labelIds =>
+      _$this._labelIds ??= new ListBuilder<String?>();
+  set labelIds(ListBuilder<String?>? labelIds) => _$this._labelIds = labelIds;
 
   String? _labelableId;
   String? get labelableId => _$this._labelableId;
@@ -19578,7 +19578,7 @@ class GClosePullRequestInputBuilder
 
 class _$GCommitAuthor extends GCommitAuthor {
   @override
-  final BuiltList<String>? emails;
+  final BuiltList<String?>? emails;
   @override
   final String? id;
 
@@ -19618,10 +19618,10 @@ class GCommitAuthorBuilder
     implements Builder<GCommitAuthor, GCommitAuthorBuilder> {
   _$GCommitAuthor? _$v;
 
-  ListBuilder<String>? _emails;
-  ListBuilder<String> get emails =>
-      _$this._emails ??= new ListBuilder<String>();
-  set emails(ListBuilder<String>? emails) => _$this._emails = emails;
+  ListBuilder<String?>? _emails;
+  ListBuilder<String?> get emails =>
+      _$this._emails ??= new ListBuilder<String?>();
+  set emails(ListBuilder<String?>? emails) => _$this._emails = emails;
 
   String? _id;
   String? get id => _$this._id;
@@ -20026,13 +20026,13 @@ class _$GCreateBranchProtectionRuleInput
   @override
   final String pattern;
   @override
-  final BuiltList<String>? pushActorIds;
+  final BuiltList<String?>? pushActorIds;
   @override
   final String repositoryId;
   @override
   final int? requiredApprovingReviewCount;
   @override
-  final BuiltList<String>? requiredStatusCheckContexts;
+  final BuiltList<String?>? requiredStatusCheckContexts;
   @override
   final bool? requiresApprovingReviews;
   @override
@@ -20048,7 +20048,7 @@ class _$GCreateBranchProtectionRuleInput
   @override
   final bool? restrictsReviewDismissals;
   @override
-  final BuiltList<String>? reviewDismissalActorIds;
+  final BuiltList<String?>? reviewDismissalActorIds;
 
   factory _$GCreateBranchProtectionRuleInput(
           [void Function(GCreateBranchProtectionRuleInputBuilder)? updates]) =>
@@ -20198,10 +20198,10 @@ class GCreateBranchProtectionRuleInputBuilder
   String? get pattern => _$this._pattern;
   set pattern(String? pattern) => _$this._pattern = pattern;
 
-  ListBuilder<String>? _pushActorIds;
-  ListBuilder<String> get pushActorIds =>
-      _$this._pushActorIds ??= new ListBuilder<String>();
-  set pushActorIds(ListBuilder<String>? pushActorIds) =>
+  ListBuilder<String?>? _pushActorIds;
+  ListBuilder<String?> get pushActorIds =>
+      _$this._pushActorIds ??= new ListBuilder<String?>();
+  set pushActorIds(ListBuilder<String?>? pushActorIds) =>
       _$this._pushActorIds = pushActorIds;
 
   String? _repositoryId;
@@ -20213,11 +20213,11 @@ class GCreateBranchProtectionRuleInputBuilder
   set requiredApprovingReviewCount(int? requiredApprovingReviewCount) =>
       _$this._requiredApprovingReviewCount = requiredApprovingReviewCount;
 
-  ListBuilder<String>? _requiredStatusCheckContexts;
-  ListBuilder<String> get requiredStatusCheckContexts =>
-      _$this._requiredStatusCheckContexts ??= new ListBuilder<String>();
+  ListBuilder<String?>? _requiredStatusCheckContexts;
+  ListBuilder<String?> get requiredStatusCheckContexts =>
+      _$this._requiredStatusCheckContexts ??= new ListBuilder<String?>();
   set requiredStatusCheckContexts(
-          ListBuilder<String>? requiredStatusCheckContexts) =>
+          ListBuilder<String?>? requiredStatusCheckContexts) =>
       _$this._requiredStatusCheckContexts = requiredStatusCheckContexts;
 
   bool? _requiresApprovingReviews;
@@ -20255,10 +20255,10 @@ class GCreateBranchProtectionRuleInputBuilder
   set restrictsReviewDismissals(bool? restrictsReviewDismissals) =>
       _$this._restrictsReviewDismissals = restrictsReviewDismissals;
 
-  ListBuilder<String>? _reviewDismissalActorIds;
-  ListBuilder<String> get reviewDismissalActorIds =>
-      _$this._reviewDismissalActorIds ??= new ListBuilder<String>();
-  set reviewDismissalActorIds(ListBuilder<String>? reviewDismissalActorIds) =>
+  ListBuilder<String?>? _reviewDismissalActorIds;
+  ListBuilder<String?> get reviewDismissalActorIds =>
+      _$this._reviewDismissalActorIds ??= new ListBuilder<String?>();
+  set reviewDismissalActorIds(ListBuilder<String?>? reviewDismissalActorIds) =>
       _$this._reviewDismissalActorIds = reviewDismissalActorIds;
 
   GCreateBranchProtectionRuleInputBuilder();
@@ -20351,7 +20351,7 @@ class GCreateBranchProtectionRuleInputBuilder
 class _$GCreateEnterpriseOrganizationInput
     extends GCreateEnterpriseOrganizationInput {
   @override
-  final BuiltList<String> adminLogins;
+  final BuiltList<String?> adminLogins;
   @override
   final String billingEmail;
   @override
@@ -20441,10 +20441,10 @@ class GCreateEnterpriseOrganizationInputBuilder
             GCreateEnterpriseOrganizationInputBuilder> {
   _$GCreateEnterpriseOrganizationInput? _$v;
 
-  ListBuilder<String>? _adminLogins;
-  ListBuilder<String> get adminLogins =>
-      _$this._adminLogins ??= new ListBuilder<String>();
-  set adminLogins(ListBuilder<String>? adminLogins) =>
+  ListBuilder<String?>? _adminLogins;
+  ListBuilder<String?> get adminLogins =>
+      _$this._adminLogins ??= new ListBuilder<String?>();
+  set adminLogins(ListBuilder<String?>? adminLogins) =>
       _$this._adminLogins = adminLogins;
 
   String? _billingEmail;
@@ -20532,17 +20532,17 @@ class GCreateEnterpriseOrganizationInputBuilder
 
 class _$GCreateIssueInput extends GCreateIssueInput {
   @override
-  final BuiltList<String>? assigneeIds;
+  final BuiltList<String?>? assigneeIds;
   @override
   final String? body;
   @override
   final String? clientMutationId;
   @override
-  final BuiltList<String>? labelIds;
+  final BuiltList<String?>? labelIds;
   @override
   final String? milestoneId;
   @override
-  final BuiltList<String>? projectIds;
+  final BuiltList<String?>? projectIds;
   @override
   final String repositoryId;
   @override
@@ -20624,10 +20624,10 @@ class GCreateIssueInputBuilder
     implements Builder<GCreateIssueInput, GCreateIssueInputBuilder> {
   _$GCreateIssueInput? _$v;
 
-  ListBuilder<String>? _assigneeIds;
-  ListBuilder<String> get assigneeIds =>
-      _$this._assigneeIds ??= new ListBuilder<String>();
-  set assigneeIds(ListBuilder<String>? assigneeIds) =>
+  ListBuilder<String?>? _assigneeIds;
+  ListBuilder<String?> get assigneeIds =>
+      _$this._assigneeIds ??= new ListBuilder<String?>();
+  set assigneeIds(ListBuilder<String?>? assigneeIds) =>
       _$this._assigneeIds = assigneeIds;
 
   String? _body;
@@ -20639,19 +20639,19 @@ class GCreateIssueInputBuilder
   set clientMutationId(String? clientMutationId) =>
       _$this._clientMutationId = clientMutationId;
 
-  ListBuilder<String>? _labelIds;
-  ListBuilder<String> get labelIds =>
-      _$this._labelIds ??= new ListBuilder<String>();
-  set labelIds(ListBuilder<String>? labelIds) => _$this._labelIds = labelIds;
+  ListBuilder<String?>? _labelIds;
+  ListBuilder<String?> get labelIds =>
+      _$this._labelIds ??= new ListBuilder<String?>();
+  set labelIds(ListBuilder<String?>? labelIds) => _$this._labelIds = labelIds;
 
   String? _milestoneId;
   String? get milestoneId => _$this._milestoneId;
   set milestoneId(String? milestoneId) => _$this._milestoneId = milestoneId;
 
-  ListBuilder<String>? _projectIds;
-  ListBuilder<String> get projectIds =>
-      _$this._projectIds ??= new ListBuilder<String>();
-  set projectIds(ListBuilder<String>? projectIds) =>
+  ListBuilder<String?>? _projectIds;
+  ListBuilder<String?> get projectIds =>
+      _$this._projectIds ??= new ListBuilder<String?>();
+  set projectIds(ListBuilder<String?>? projectIds) =>
       _$this._projectIds = projectIds;
 
   String? _repositoryId;
@@ -20741,7 +20741,7 @@ class _$GCreateProjectInput extends GCreateProjectInput {
   @override
   final String ownerId;
   @override
-  final BuiltList<String>? repositoryIds;
+  final BuiltList<String?>? repositoryIds;
   @override
   final GProjectTemplate? template;
 
@@ -20829,10 +20829,10 @@ class GCreateProjectInputBuilder
   String? get ownerId => _$this._ownerId;
   set ownerId(String? ownerId) => _$this._ownerId = ownerId;
 
-  ListBuilder<String>? _repositoryIds;
-  ListBuilder<String> get repositoryIds =>
-      _$this._repositoryIds ??= new ListBuilder<String>();
-  set repositoryIds(ListBuilder<String>? repositoryIds) =>
+  ListBuilder<String?>? _repositoryIds;
+  ListBuilder<String?> get repositoryIds =>
+      _$this._repositoryIds ??= new ListBuilder<String?>();
+  set repositoryIds(ListBuilder<String?>? repositoryIds) =>
       _$this._repositoryIds = repositoryIds;
 
   GProjectTemplate? _template;
@@ -24794,7 +24794,7 @@ class _$GIssueFilters extends GIssueFilters {
   @override
   final String? createdBy;
   @override
-  final BuiltList<String>? labels;
+  final BuiltList<String?>? labels;
   @override
   final String? mentioned;
   @override
@@ -24802,7 +24802,7 @@ class _$GIssueFilters extends GIssueFilters {
   @override
   final GDateTime? since;
   @override
-  final BuiltList<GIssueState>? states;
+  final BuiltList<GIssueState?>? states;
   @override
   final bool? viewerSubscribed;
 
@@ -24884,10 +24884,10 @@ class GIssueFiltersBuilder
   String? get createdBy => _$this._createdBy;
   set createdBy(String? createdBy) => _$this._createdBy = createdBy;
 
-  ListBuilder<String>? _labels;
-  ListBuilder<String> get labels =>
-      _$this._labels ??= new ListBuilder<String>();
-  set labels(ListBuilder<String>? labels) => _$this._labels = labels;
+  ListBuilder<String?>? _labels;
+  ListBuilder<String?> get labels =>
+      _$this._labels ??= new ListBuilder<String?>();
+  set labels(ListBuilder<String?>? labels) => _$this._labels = labels;
 
   String? _mentioned;
   String? get mentioned => _$this._mentioned;
@@ -24901,10 +24901,10 @@ class GIssueFiltersBuilder
   GDateTimeBuilder get since => _$this._since ??= new GDateTimeBuilder();
   set since(GDateTimeBuilder? since) => _$this._since = since;
 
-  ListBuilder<GIssueState>? _states;
-  ListBuilder<GIssueState> get states =>
-      _$this._states ??= new ListBuilder<GIssueState>();
-  set states(ListBuilder<GIssueState>? states) => _$this._states = states;
+  ListBuilder<GIssueState?>? _states;
+  ListBuilder<GIssueState?> get states =>
+      _$this._states ??= new ListBuilder<GIssueState?>();
+  set states(ListBuilder<GIssueState?>? states) => _$this._states = states;
 
   bool? _viewerSubscribed;
   bool? get viewerSubscribed => _$this._viewerSubscribed;
@@ -27017,7 +27017,7 @@ class _$GRemoveAssigneesFromAssignableInput
   @override
   final String assignableId;
   @override
-  final BuiltList<String> assigneeIds;
+  final BuiltList<String?> assigneeIds;
   @override
   final String? clientMutationId;
 
@@ -27082,10 +27082,10 @@ class GRemoveAssigneesFromAssignableInputBuilder
   String? get assignableId => _$this._assignableId;
   set assignableId(String? assignableId) => _$this._assignableId = assignableId;
 
-  ListBuilder<String>? _assigneeIds;
-  ListBuilder<String> get assigneeIds =>
-      _$this._assigneeIds ??= new ListBuilder<String>();
-  set assigneeIds(ListBuilder<String>? assigneeIds) =>
+  ListBuilder<String?>? _assigneeIds;
+  ListBuilder<String?> get assigneeIds =>
+      _$this._assigneeIds ??= new ListBuilder<String?>();
+  set assigneeIds(ListBuilder<String?>? assigneeIds) =>
       _$this._assigneeIds = assigneeIds;
 
   String? _clientMutationId;
@@ -27392,7 +27392,7 @@ class _$GRemoveLabelsFromLabelableInput
   @override
   final String? clientMutationId;
   @override
-  final BuiltList<String> labelIds;
+  final BuiltList<String?> labelIds;
   @override
   final String labelableId;
 
@@ -27456,10 +27456,10 @@ class GRemoveLabelsFromLabelableInputBuilder
   set clientMutationId(String? clientMutationId) =>
       _$this._clientMutationId = clientMutationId;
 
-  ListBuilder<String>? _labelIds;
-  ListBuilder<String> get labelIds =>
-      _$this._labelIds ??= new ListBuilder<String>();
-  set labelIds(ListBuilder<String>? labelIds) => _$this._labelIds = labelIds;
+  ListBuilder<String?>? _labelIds;
+  ListBuilder<String?> get labelIds =>
+      _$this._labelIds ??= new ListBuilder<String?>();
+  set labelIds(ListBuilder<String?>? labelIds) => _$this._labelIds = labelIds;
 
   String? _labelableId;
   String? get labelableId => _$this._labelableId;
@@ -28245,11 +28245,11 @@ class _$GRequestReviewsInput extends GRequestReviewsInput {
   @override
   final String pullRequestId;
   @override
-  final BuiltList<String>? teamIds;
+  final BuiltList<String?>? teamIds;
   @override
   final bool? union;
   @override
-  final BuiltList<String>? userIds;
+  final BuiltList<String?>? userIds;
 
   factory _$GRequestReviewsInput(
           [void Function(GRequestReviewsInputBuilder)? updates]) =>
@@ -28322,19 +28322,19 @@ class GRequestReviewsInputBuilder
   set pullRequestId(String? pullRequestId) =>
       _$this._pullRequestId = pullRequestId;
 
-  ListBuilder<String>? _teamIds;
-  ListBuilder<String> get teamIds =>
-      _$this._teamIds ??= new ListBuilder<String>();
-  set teamIds(ListBuilder<String>? teamIds) => _$this._teamIds = teamIds;
+  ListBuilder<String?>? _teamIds;
+  ListBuilder<String?> get teamIds =>
+      _$this._teamIds ??= new ListBuilder<String?>();
+  set teamIds(ListBuilder<String?>? teamIds) => _$this._teamIds = teamIds;
 
   bool? _union;
   bool? get union => _$this._union;
   set union(bool? union) => _$this._union = union;
 
-  ListBuilder<String>? _userIds;
-  ListBuilder<String> get userIds =>
-      _$this._userIds ??= new ListBuilder<String>();
-  set userIds(ListBuilder<String>? userIds) => _$this._userIds = userIds;
+  ListBuilder<String?>? _userIds;
+  ListBuilder<String?> get userIds =>
+      _$this._userIds ??= new ListBuilder<String?>();
+  set userIds(ListBuilder<String?>? userIds) => _$this._userIds = userIds;
 
   GRequestReviewsInputBuilder();
 
@@ -30649,11 +30649,11 @@ class _$GUpdateBranchProtectionRuleInput
   @override
   final String? pattern;
   @override
-  final BuiltList<String>? pushActorIds;
+  final BuiltList<String?>? pushActorIds;
   @override
   final int? requiredApprovingReviewCount;
   @override
-  final BuiltList<String>? requiredStatusCheckContexts;
+  final BuiltList<String?>? requiredStatusCheckContexts;
   @override
   final bool? requiresApprovingReviews;
   @override
@@ -30669,7 +30669,7 @@ class _$GUpdateBranchProtectionRuleInput
   @override
   final bool? restrictsReviewDismissals;
   @override
-  final BuiltList<String>? reviewDismissalActorIds;
+  final BuiltList<String?>? reviewDismissalActorIds;
 
   factory _$GUpdateBranchProtectionRuleInput(
           [void Function(GUpdateBranchProtectionRuleInputBuilder)? updates]) =>
@@ -30823,10 +30823,10 @@ class GUpdateBranchProtectionRuleInputBuilder
   String? get pattern => _$this._pattern;
   set pattern(String? pattern) => _$this._pattern = pattern;
 
-  ListBuilder<String>? _pushActorIds;
-  ListBuilder<String> get pushActorIds =>
-      _$this._pushActorIds ??= new ListBuilder<String>();
-  set pushActorIds(ListBuilder<String>? pushActorIds) =>
+  ListBuilder<String?>? _pushActorIds;
+  ListBuilder<String?> get pushActorIds =>
+      _$this._pushActorIds ??= new ListBuilder<String?>();
+  set pushActorIds(ListBuilder<String?>? pushActorIds) =>
       _$this._pushActorIds = pushActorIds;
 
   int? _requiredApprovingReviewCount;
@@ -30834,11 +30834,11 @@ class GUpdateBranchProtectionRuleInputBuilder
   set requiredApprovingReviewCount(int? requiredApprovingReviewCount) =>
       _$this._requiredApprovingReviewCount = requiredApprovingReviewCount;
 
-  ListBuilder<String>? _requiredStatusCheckContexts;
-  ListBuilder<String> get requiredStatusCheckContexts =>
-      _$this._requiredStatusCheckContexts ??= new ListBuilder<String>();
+  ListBuilder<String?>? _requiredStatusCheckContexts;
+  ListBuilder<String?> get requiredStatusCheckContexts =>
+      _$this._requiredStatusCheckContexts ??= new ListBuilder<String?>();
   set requiredStatusCheckContexts(
-          ListBuilder<String>? requiredStatusCheckContexts) =>
+          ListBuilder<String?>? requiredStatusCheckContexts) =>
       _$this._requiredStatusCheckContexts = requiredStatusCheckContexts;
 
   bool? _requiresApprovingReviews;
@@ -30876,10 +30876,10 @@ class GUpdateBranchProtectionRuleInputBuilder
   set restrictsReviewDismissals(bool? restrictsReviewDismissals) =>
       _$this._restrictsReviewDismissals = restrictsReviewDismissals;
 
-  ListBuilder<String>? _reviewDismissalActorIds;
-  ListBuilder<String> get reviewDismissalActorIds =>
-      _$this._reviewDismissalActorIds ??= new ListBuilder<String>();
-  set reviewDismissalActorIds(ListBuilder<String>? reviewDismissalActorIds) =>
+  ListBuilder<String?>? _reviewDismissalActorIds;
+  ListBuilder<String?> get reviewDismissalActorIds =>
+      _$this._reviewDismissalActorIds ??= new ListBuilder<String?>();
+  set reviewDismissalActorIds(ListBuilder<String?>? reviewDismissalActorIds) =>
       _$this._reviewDismissalActorIds = reviewDismissalActorIds;
 
   GUpdateBranchProtectionRuleInputBuilder();
@@ -33554,7 +33554,7 @@ class GUpdateIssueCommentInputBuilder
 
 class _$GUpdateIssueInput extends GUpdateIssueInput {
   @override
-  final BuiltList<String>? assigneeIds;
+  final BuiltList<String?>? assigneeIds;
   @override
   final String? body;
   @override
@@ -33562,11 +33562,11 @@ class _$GUpdateIssueInput extends GUpdateIssueInput {
   @override
   final String id;
   @override
-  final BuiltList<String>? labelIds;
+  final BuiltList<String?>? labelIds;
   @override
   final String? milestoneId;
   @override
-  final BuiltList<String>? projectIds;
+  final BuiltList<String?>? projectIds;
   @override
   final GIssueState? state;
   @override
@@ -33653,10 +33653,10 @@ class GUpdateIssueInputBuilder
     implements Builder<GUpdateIssueInput, GUpdateIssueInputBuilder> {
   _$GUpdateIssueInput? _$v;
 
-  ListBuilder<String>? _assigneeIds;
-  ListBuilder<String> get assigneeIds =>
-      _$this._assigneeIds ??= new ListBuilder<String>();
-  set assigneeIds(ListBuilder<String>? assigneeIds) =>
+  ListBuilder<String?>? _assigneeIds;
+  ListBuilder<String?> get assigneeIds =>
+      _$this._assigneeIds ??= new ListBuilder<String?>();
+  set assigneeIds(ListBuilder<String?>? assigneeIds) =>
       _$this._assigneeIds = assigneeIds;
 
   String? _body;
@@ -33672,19 +33672,19 @@ class GUpdateIssueInputBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  ListBuilder<String>? _labelIds;
-  ListBuilder<String> get labelIds =>
-      _$this._labelIds ??= new ListBuilder<String>();
-  set labelIds(ListBuilder<String>? labelIds) => _$this._labelIds = labelIds;
+  ListBuilder<String?>? _labelIds;
+  ListBuilder<String?> get labelIds =>
+      _$this._labelIds ??= new ListBuilder<String?>();
+  set labelIds(ListBuilder<String?>? labelIds) => _$this._labelIds = labelIds;
 
   String? _milestoneId;
   String? get milestoneId => _$this._milestoneId;
   set milestoneId(String? milestoneId) => _$this._milestoneId = milestoneId;
 
-  ListBuilder<String>? _projectIds;
-  ListBuilder<String> get projectIds =>
-      _$this._projectIds ??= new ListBuilder<String>();
-  set projectIds(ListBuilder<String>? projectIds) =>
+  ListBuilder<String?>? _projectIds;
+  ListBuilder<String?> get projectIds =>
+      _$this._projectIds ??= new ListBuilder<String?>();
+  set projectIds(ListBuilder<String?>? projectIds) =>
       _$this._projectIds = projectIds;
 
   GIssueState? _state;
@@ -34161,7 +34161,7 @@ class GUpdateProjectInputBuilder
 
 class _$GUpdatePullRequestInput extends GUpdatePullRequestInput {
   @override
-  final BuiltList<String>? assigneeIds;
+  final BuiltList<String?>? assigneeIds;
   @override
   final String? baseRefName;
   @override
@@ -34169,13 +34169,13 @@ class _$GUpdatePullRequestInput extends GUpdatePullRequestInput {
   @override
   final String? clientMutationId;
   @override
-  final BuiltList<String>? labelIds;
+  final BuiltList<String?>? labelIds;
   @override
   final bool? maintainerCanModify;
   @override
   final String? milestoneId;
   @override
-  final BuiltList<String>? projectIds;
+  final BuiltList<String?>? projectIds;
   @override
   final String pullRequestId;
   @override
@@ -34277,10 +34277,10 @@ class GUpdatePullRequestInputBuilder
         Builder<GUpdatePullRequestInput, GUpdatePullRequestInputBuilder> {
   _$GUpdatePullRequestInput? _$v;
 
-  ListBuilder<String>? _assigneeIds;
-  ListBuilder<String> get assigneeIds =>
-      _$this._assigneeIds ??= new ListBuilder<String>();
-  set assigneeIds(ListBuilder<String>? assigneeIds) =>
+  ListBuilder<String?>? _assigneeIds;
+  ListBuilder<String?> get assigneeIds =>
+      _$this._assigneeIds ??= new ListBuilder<String?>();
+  set assigneeIds(ListBuilder<String?>? assigneeIds) =>
       _$this._assigneeIds = assigneeIds;
 
   String? _baseRefName;
@@ -34296,10 +34296,10 @@ class GUpdatePullRequestInputBuilder
   set clientMutationId(String? clientMutationId) =>
       _$this._clientMutationId = clientMutationId;
 
-  ListBuilder<String>? _labelIds;
-  ListBuilder<String> get labelIds =>
-      _$this._labelIds ??= new ListBuilder<String>();
-  set labelIds(ListBuilder<String>? labelIds) => _$this._labelIds = labelIds;
+  ListBuilder<String?>? _labelIds;
+  ListBuilder<String?> get labelIds =>
+      _$this._labelIds ??= new ListBuilder<String?>();
+  set labelIds(ListBuilder<String?>? labelIds) => _$this._labelIds = labelIds;
 
   bool? _maintainerCanModify;
   bool? get maintainerCanModify => _$this._maintainerCanModify;
@@ -34310,10 +34310,10 @@ class GUpdatePullRequestInputBuilder
   String? get milestoneId => _$this._milestoneId;
   set milestoneId(String? milestoneId) => _$this._milestoneId = milestoneId;
 
-  ListBuilder<String>? _projectIds;
-  ListBuilder<String> get projectIds =>
-      _$this._projectIds ??= new ListBuilder<String>();
-  set projectIds(ListBuilder<String>? projectIds) =>
+  ListBuilder<String?>? _projectIds;
+  ListBuilder<String?> get projectIds =>
+      _$this._projectIds ??= new ListBuilder<String?>();
+  set projectIds(ListBuilder<String?>? projectIds) =>
       _$this._projectIds = projectIds;
 
   String? _pullRequestId;
@@ -35393,7 +35393,7 @@ class _$GUpdateTopicsInput extends GUpdateTopicsInput {
   @override
   final String repositoryId;
   @override
-  final BuiltList<String> topicNames;
+  final BuiltList<String?> topicNames;
 
   factory _$GUpdateTopicsInput(
           [void Function(GUpdateTopicsInputBuilder)? updates]) =>
@@ -35458,10 +35458,10 @@ class GUpdateTopicsInputBuilder
   String? get repositoryId => _$this._repositoryId;
   set repositoryId(String? repositoryId) => _$this._repositoryId = repositoryId;
 
-  ListBuilder<String>? _topicNames;
-  ListBuilder<String> get topicNames =>
-      _$this._topicNames ??= new ListBuilder<String>();
-  set topicNames(ListBuilder<String>? topicNames) =>
+  ListBuilder<String?>? _topicNames;
+  ListBuilder<String?> get topicNames =>
+      _$this._topicNames ??= new ListBuilder<String?>();
+  set topicNames(ListBuilder<String?>? topicNames) =>
       _$this._topicNames = topicNames;
 
   GUpdateTopicsInputBuilder();
