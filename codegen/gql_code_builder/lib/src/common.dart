@@ -86,25 +86,28 @@ const defaultTypeMap = <String, Reference>{
   "Boolean": Reference("bool"),
 };
 
-Reference _typeRef(TypeNode type, Map<String, Reference> typeMap) {
+Reference _typeRef(TypeNode type, Map<String, Reference> typeMap,
+    bool forceNullable,) {
   if (type is NamedTypeNode) {
     final ref = typeMap[type.name.value] ?? Reference(type.name.value);
     return TypeReference(
-      (b) => b
+          (b) =>
+      b
         ..url = ref.url
         ..symbol = ref.symbol
 
-        /// TODO: remove `inList` check
-        /// https://github.com/google/built_value.dart/issues/1011#issuecomment-804843573
-        ..isNullable = !type.isNonNull,
+      /// TODO: remove `inList` check
+      /// https://github.com/google/built_value.dart/issues/1011#issuecomment-804843573
+        ..isNullable = forceNullable || !type.isNonNull,
     );
   } else if (type is ListTypeNode) {
     return TypeReference(
-      (b) => b
+          (b) =>
+      b
         ..url = "package:built_collection/built_collection.dart"
         ..symbol = "BuiltList"
-        ..isNullable = !type.isNonNull
-        ..types.add(_typeRef(type.type, typeMap)),
+        ..isNullable = forceNullable || !type.isNonNull
+        ..types.add(_typeRef(type.type, typeMap, true)),
     );
   }
   throw Exception("Unrecognized TypeNode type");
@@ -116,19 +119,15 @@ const defaultRootTypes = {
   OperationType.subscription: "Subscription"
 };
 
-NamedTypeNode unwrapTypeNode(
-  TypeNode node,
-) {
+NamedTypeNode unwrapTypeNode(TypeNode node,) {
   if (node is ListTypeNode) {
     return unwrapTypeNode(node.type);
   }
   return node as NamedTypeNode;
 }
 
-TypeDefinitionNode? getTypeDefinitionNode(
-  DocumentNode schema,
-  String name,
-) =>
+TypeDefinitionNode? getTypeDefinitionNode(DocumentNode schema,
+    String name,) =>
     schema.definitions
         .whereType<TypeDefinitionNode>()
         .firstWhereOrNull((node) => node.name.value == name);
@@ -141,6 +140,7 @@ Method buildGetter({
   String? typeRefPrefix,
   bool built = true,
   bool isOverride = false,
+  bool forceNullable = false,
 }) {
   final unwrappedTypeNode = unwrapTypeNode(typeNode);
   final typeName = unwrappedTypeNode.name.value;
@@ -153,21 +153,20 @@ Method buildGetter({
     ...defaultTypeMap,
     if (typeRefPrefix != null)
       typeName: refer("${typeRefPrefix}_${nameNode.value}")
-    else if (typeDef != null)
-      typeName: refer(
-        builtClassName(typeName),
-        "${schemaSource.url}#schema",
-      ),
+    else
+      if (typeDef != null)
+        typeName: refer(
+          builtClassName(typeName),
+          "${schemaSource.url}#schema",
+        ),
     ...typeOverrides,
   };
 
-  final returnType = _typeRef(
-    typeNode,
-    typeMap,
-  );
+  final returnType = _typeRef(typeNode, typeMap, forceNullable);
 
   return Method(
-    (b) => b
+        (b) =>
+    b
       ..annotations = ListBuilder(<Expression>[
         if (isOverride) refer("override"),
         if (built && identifier(nameNode.value) != nameNode.value)
@@ -180,11 +179,14 @@ Method buildGetter({
   );
 }
 
-Method buildSerializerGetter(String className) => Method(
-      (b) => b
+Method buildSerializerGetter(String className) =>
+    Method(
+          (b) =>
+      b
         ..static = true
         ..returns = TypeReference(
-          (b) => b
+              (b) =>
+          b
             ..url = "package:built_value/serializer.dart"
             ..symbol = "Serializer"
             ..types.add(
@@ -196,13 +198,13 @@ Method buildSerializerGetter(String className) => Method(
         ..lambda = true,
     );
 
-Method buildToJsonGetter(
-  String className, {
+Method buildToJsonGetter(String className, {
   bool implemented = true,
   bool isOverride = false,
 }) =>
     Method(
-      (b) => b
+          (b) =>
+      b
         ..annotations.addAll([
           if (isOverride) refer("override"),
         ])
@@ -211,31 +213,36 @@ Method buildToJsonGetter(
         ..lambda = implemented
         ..body = implemented
             ? refer("serializers", "#serializer")
-                .property("serializeWith")
-                .call([
-                  refer(className).property("serializer"),
-                  refer("this"),
-                ])
-                .asA(refer("Map<String, dynamic>"))
-                .code
+            .property("serializeWith")
+            .call([
+          refer(className).property("serializer"),
+          refer("this"),
+        ])
+            .asA(refer("Map<String, dynamic>"))
+            .code
             : null,
     );
 
-Method buildFromJsonGetter(String className) => Method(
-      (b) => b
+Method buildFromJsonGetter(String className) =>
+    Method(
+          (b) =>
+      b
         ..static = true
         ..returns = TypeReference(
-          (b) => b
+              (b) =>
+          b
             ..symbol = className
             ..isNullable = true,
         )
         ..name = "fromJson"
-        ..requiredParameters.add(Parameter((b) => b
+        ..requiredParameters.add(Parameter((b) =>
+        b
           ..type = refer("Map<String, dynamic>")
           ..name = "json"))
         ..lambda = true
         ..body = refer("serializers", "#serializer")
             .property("deserializeWith")
             .call(
-                [refer(className).property("serializer"), refer("json")]).code,
+            [refer(className).property("serializer"), refer("json")])
+            .code,
     );
