@@ -27,17 +27,6 @@ import 'package:end_to_end_test/custom_field.dart';
 import 'package:end_to_end_test/custom_field_serializer.dart'
     show CustomFieldSerializer;
 import 'package:end_to_end_test/date_serializer.dart' show DateSerializer;
-import 'package:end_to_end_test/fragments/__generated__/fragment_with_scalar_var.data.gql.dart'
-    show
-        GPostFragmentForUser1Data,
-        GPostFragmentForUser1Data_favoritedUsers,
-        GPostsWithFixedVariableData,
-        GPostsWithFixedVariableData_posts,
-        GPostsWithFixedVariableData_posts_favoritedUsers;
-import 'package:end_to_end_test/fragments/__generated__/fragment_with_scalar_var.req.gql.dart'
-    show GPostsWithFixedVariable;
-import 'package:end_to_end_test/fragments/__generated__/fragment_with_scalar_var.var.gql.dart'
-    show GPostFragmentForUser1Vars, GPostsWithFixedVariableVars;
 import 'package:end_to_end_test/directives/__generated__/hero_include.data.gql.dart'
     show GHeroIncludeData, GHeroIncludeData_hero;
 import 'package:end_to_end_test/directives/__generated__/hero_include.req.gql.dart'
@@ -61,6 +50,17 @@ import 'package:end_to_end_test/directives/__generated__/hero_skip_fragment.req.
     show GHeroSkipFragment;
 import 'package:end_to_end_test/directives/__generated__/hero_skip_fragment.var.gql.dart'
     show GHeroDetailVars, GHeroSkipFragmentVars;
+import 'package:end_to_end_test/fragments/__generated__/fragment_with_scalar_var.data.gql.dart'
+    show
+        GPostFragmentForUser1Data,
+        GPostFragmentForUser1Data_favoritedUsers,
+        GPostsWithFixedVariableData,
+        GPostsWithFixedVariableData_posts,
+        GPostsWithFixedVariableData_posts_favoritedUsers;
+import 'package:end_to_end_test/fragments/__generated__/fragment_with_scalar_var.req.gql.dart'
+    show GPostsWithFixedVariable;
+import 'package:end_to_end_test/fragments/__generated__/fragment_with_scalar_var.var.gql.dart'
+    show GPostFragmentForUser1Vars, GPostsWithFixedVariableVars;
 import 'package:end_to_end_test/fragments/__generated__/hero_inline_fragment.data.gql.dart'
     show
         GHeroWithInlineFragmentsData_hero,
@@ -199,10 +199,10 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   ..add(DateSerializer())
   ..add(CustomFieldSerializer())
   ..add(GHeroForEpisodeData_hero.serializer)
+  ..add(GHeroWithInlineFragmentsData_hero.serializer)
   ..add(GheroFieldsFragmentData.serializer)
   ..add(GheroFieldsFragmentData__asHuman_friends.serializer)
   ..add(GhumanFieldsFragmentData_friends.serializer)
-  ..add(GHeroWithInlineFragmentsData_hero.serializer)
   ..addPlugin(StandardJsonPlugin());
 @SerializersFor([
   GAliasedHero,
@@ -244,10 +244,6 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GHeroNoVarsData,
   GHeroNoVarsData_hero,
   GHeroNoVarsVars,
-  GHeroWith2Fragments,
-  GHeroWith2FragmentsData,
-  GHeroWith2FragmentsData_hero,
-  GHeroWith2FragmentsVars,
   GHeroSkip,
   GHeroSkipData,
   GHeroSkipData_hero,
@@ -257,6 +253,10 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GHeroSkipFragmentData_hero_friends,
   GHeroSkipFragmentVars,
   GHeroSkipVars,
+  GHeroWith2Fragments,
+  GHeroWith2FragmentsData,
+  GHeroWith2FragmentsData_hero,
+  GHeroWith2FragmentsVars,
   GHeroWithFragments,
   GHeroWithFragmentsData,
   GHeroWithFragmentsData_hero,
@@ -268,14 +268,14 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GHeroWithFragmentsDuplicationData_hero,
   GHeroWithFragmentsDuplicationVars,
   GHeroWithFragmentsVars,
-  GHeroWithInterfaceSubTypedFragments,
-  GHeroWithInterfaceSubTypedFragmentsData,
-  GHeroWithInterfaceSubTypedFragmentsData_hero,
-  GHeroWithInterfaceSubTypedFragmentsVars,
   GHeroWithInlineFragments,
   GHeroWithInlineFragmentsData,
   GHeroWithInlineFragmentsData_hero__base,
   GHeroWithInlineFragmentsVars,
+  GHeroWithInterfaceSubTypedFragments,
+  GHeroWithInterfaceSubTypedFragmentsData,
+  GHeroWithInterfaceSubTypedFragmentsData_hero,
+  GHeroWithInterfaceSubTypedFragmentsVars,
   GHumanWithArgs,
   GHumanWithArgsData,
   GHumanWithArgsData_human,

@@ -2,7 +2,6 @@ import "package:code_builder/code_builder.dart";
 import "package:collection/collection.dart";
 import "package:gql/ast.dart";
 import "package:gql_code_builder/src/config/when_extension_config.dart";
-import "package:gql/language.dart";
 
 import "../../source.dart";
 import "../built_class.dart";
